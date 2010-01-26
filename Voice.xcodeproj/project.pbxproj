@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765070DF74369002DB57D /* CoreGraphics.framework */; };
+		28A32A6F110F853200C43971 /* VoiceAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A32A50110F853200C43971 /* VoiceAppDelegate.m */; };
+		28A32A70110F853200C43971 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A32A53110F853200C43971 /* ComposeViewController.m */; };
+		28A32A71110F853200C43971 /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A32A56110F853200C43971 /* ContactsViewController.m */; };
+		28A32A72110F853200C43971 /* ConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A32A59110F853200C43971 /* ConversationViewController.m */; };
+		28A32A73110F853200C43971 /* DialerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A32A5C110F853200C43971 /* DialerViewController.m */; };
+		28A32A74110F853200C43971 /* InboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A32A5F110F853200C43971 /* InboxViewController.m */; };
+		28A32A75110F853200C43971 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A32A62110F853200C43971 /* PageViewController.m */; };
+		28A32A76110F853200C43971 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A32A65110F853200C43971 /* SettingsViewController.m */; };
+		28A32A77110F853200C43971 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A32A68110F853200C43971 /* WebViewController.m */; };
+		28A32A78110F853200C43971 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A32A6D110F853200C43971 /* main.m */; };
+		28A32A83110F854500C43971 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 28A32A7B110F854500C43971 /* icon.png */; };
+		28A32A84110F854500C43971 /* inbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 28A32A7C110F854500C43971 /* inbox.png */; };
+		28A32A85110F854500C43971 /* numpad.png in Resources */ = {isa = PBXBuildFile; fileRef = 28A32A7D110F854500C43971 /* numpad.png */; };
+		28A32A86110F854500C43971 /* tools.png in Resources */ = {isa = PBXBuildFile; fileRef = 28A32A7E110F854500C43971 /* tools.png */; };
+		28A32A88110F854500C43971 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28A32A81110F854500C43971 /* MainWindow.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* Voice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28A32A4F110F853200C43971 /* VoiceAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceAppDelegate.h; sourceTree = "<group>"; };
+		28A32A50110F853200C43971 /* VoiceAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceAppDelegate.m; sourceTree = "<group>"; };
+		28A32A52110F853200C43971 /* ComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
+		28A32A53110F853200C43971 /* ComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
+		28A32A55110F853200C43971 /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
+		28A32A56110F853200C43971 /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
+		28A32A58110F853200C43971 /* ConversationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationViewController.h; sourceTree = "<group>"; };
+		28A32A59110F853200C43971 /* ConversationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationViewController.m; sourceTree = "<group>"; };
+		28A32A5B110F853200C43971 /* DialerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialerViewController.h; sourceTree = "<group>"; };
+		28A32A5C110F853200C43971 /* DialerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialerViewController.m; sourceTree = "<group>"; };
+		28A32A5E110F853200C43971 /* InboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InboxViewController.h; sourceTree = "<group>"; };
+		28A32A5F110F853200C43971 /* InboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InboxViewController.m; sourceTree = "<group>"; };
+		28A32A61110F853200C43971 /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
+		28A32A62110F853200C43971 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
+		28A32A64110F853200C43971 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		28A32A65110F853200C43971 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		28A32A67110F853200C43971 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		28A32A68110F853200C43971 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		28A32A6D110F853200C43971 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		28A32A6E110F853200C43971 /* Voice_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Voice_Prefix.pch; sourceTree = "<group>"; };
+		28A32A7A110F854500C43971 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
+		28A32A7B110F854500C43971 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		28A32A7C110F854500C43971 /* inbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inbox.png; sourceTree = "<group>"; };
+		28A32A7D110F854500C43971 /* numpad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = numpad.png; sourceTree = "<group>"; };
+		28A32A7E110F854500C43971 /* tools.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tools.png; sourceTree = "<group>"; };
+		28A32A7F110F854500C43971 /* Voice-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Voice-Info.plist"; sourceTree = "<group>"; };
+		28A32A81110F854500C43971 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765080DF74369002DB57D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* Voice.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28A32A4C110F853200C43971 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				28A32A4D110F853200C43971 /* Controllers */,
+				28A32A69110F853200C43971 /* Helpers */,
+				28A32A6A110F853200C43971 /* Libraries */,
+				28A32A6B110F853200C43971 /* Models */,
+				28A32A6C110F853200C43971 /* Other */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		28A32A4D110F853200C43971 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				28A32A4E110F853200C43971 /* AppDelegate */,
+				28A32A51110F853200C43971 /* ComposeViewController */,
+				28A32A54110F853200C43971 /* ContactsViewController */,
+				28A32A57110F853200C43971 /* ConversationViewController */,
+				28A32A5A110F853200C43971 /* DialerViewController */,
+				28A32A5D110F853200C43971 /* InboxViewController */,
+				28A32A60110F853200C43971 /* PageViewController */,
+				28A32A63110F853200C43971 /* SettingsViewController */,
+				28A32A66110F853200C43971 /* WebViewController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		28A32A4E110F853200C43971 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				28A32A4F110F853200C43971 /* VoiceAppDelegate.h */,
+				28A32A50110F853200C43971 /* VoiceAppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		28A32A51110F853200C43971 /* ComposeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				28A32A52110F853200C43971 /* ComposeViewController.h */,
+				28A32A53110F853200C43971 /* ComposeViewController.m */,
+			);
+			path = ComposeViewController;
+			sourceTree = "<group>";
+		};
+		28A32A54110F853200C43971 /* ContactsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				28A32A55110F853200C43971 /* ContactsViewController.h */,
+				28A32A56110F853200C43971 /* ContactsViewController.m */,
+			);
+			path = ContactsViewController;
+			sourceTree = "<group>";
+		};
+		28A32A57110F853200C43971 /* ConversationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				28A32A58110F853200C43971 /* ConversationViewController.h */,
+				28A32A59110F853200C43971 /* ConversationViewController.m */,
+			);
+			path = ConversationViewController;
+			sourceTree = "<group>";
+		};
+		28A32A5A110F853200C43971 /* DialerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				28A32A5B110F853200C43971 /* DialerViewController.h */,
+				28A32A5C110F853200C43971 /* DialerViewController.m */,
+			);
+			path = DialerViewController;
+			sourceTree = "<group>";
+		};
+		28A32A5D110F853200C43971 /* InboxViewController */ = {
+			isa = PBXGroup;
+			children = (
+				28A32A5E110F853200C43971 /* InboxViewController.h */,
+				28A32A5F110F853200C43971 /* InboxViewController.m */,
+			);
+			path = InboxViewController;
+			sourceTree = "<group>";
+		};
+		28A32A60110F853200C43971 /* PageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				28A32A61110F853200C43971 /* PageViewController.h */,
+				28A32A62110F853200C43971 /* PageViewController.m */,
+			);
+			path = PageViewController;
+			sourceTree = "<group>";
+		};
+		28A32A63110F853200C43971 /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				28A32A64110F853200C43971 /* SettingsViewController.h */,
+				28A32A65110F853200C43971 /* SettingsViewController.m */,
+			);
+			path = SettingsViewController;
+			sourceTree = "<group>";
+		};
+		28A32A66110F853200C43971 /* WebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				28A32A67110F853200C43971 /* WebViewController.h */,
+				28A32A68110F853200C43971 /* WebViewController.m */,
+			);
+			path = WebViewController;
+			sourceTree = "<group>";
+		};
+		28A32A69110F853200C43971 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		28A32A6A110F853200C43971 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		28A32A6B110F853200C43971 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		28A32A6C110F853200C43971 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				28A32A6D110F853200C43971 /* main.m */,
+				28A32A6E110F853200C43971 /* Voice_Prefix.pch */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		28A32A79110F854500C43971 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				28A32A7A110F854500C43971 /* Entitlements.plist */,
+				28A32A7B110F854500C43971 /* icon.png */,
+				28A32A7C110F854500C43971 /* inbox.png */,
+				28A32A7D110F854500C43971 /* numpad.png */,
+				28A32A7E110F854500C43971 /* tools.png */,
+				28A32A7F110F854500C43971 /* Voice-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		28A32A80110F854500C43971 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				28A32A81110F854500C43971 /* MainWindow.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Voice */ = {
+			isa = PBXGroup;
+			children = (
+				28A32A4C110F853200C43971 /* Classes */,
+				28A32A79110F854500C43971 /* Resources */,
+				28A32A80110F854500C43971 /* Views */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+			);
+			name = Voice;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765070DF74369002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* Voice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Voice" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Voice;
+			productName = Voice;
+			productReference = 1D6058910D05DD3D006BFB54 /* Voice.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Voice" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Voice */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* Voice */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28A32A83110F854500C43971 /* icon.png in Resources */,
+				28A32A84110F854500C43971 /* inbox.png in Resources */,
+				28A32A85110F854500C43971 /* numpad.png in Resources */,
+				28A32A86110F854500C43971 /* tools.png in Resources */,
+				28A32A88110F854500C43971 /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28A32A6F110F853200C43971 /* VoiceAppDelegate.m in Sources */,
+				28A32A70110F853200C43971 /* ComposeViewController.m in Sources */,
+				28A32A71110F853200C43971 /* ContactsViewController.m in Sources */,
+				28A32A72110F853200C43971 /* ConversationViewController.m in Sources */,
+				28A32A73110F853200C43971 /* DialerViewController.m in Sources */,
+				28A32A74110F853200C43971 /* InboxViewController.m in Sources */,
+				28A32A75110F853200C43971 /* PageViewController.m in Sources */,
+				28A32A76110F853200C43971 /* SettingsViewController.m in Sources */,
+				28A32A77110F853200C43971 /* WebViewController.m in Sources */,
+				28A32A78110F853200C43971 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Classes/Other/Voice_Prefix.pch;
+				INFOPLIST_FILE = "Resources/Voice-Info.plist";
+				PRODUCT_NAME = Voice;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Classes/Other/Voice_Prefix.pch;
+				INFOPLIST_FILE = "Resources/Voice-Info.plist";
+				PRODUCT_NAME = Voice;
+			};
+			name = Release;
+		};
+		28A329E3110F7EAE00C43971 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Bleaked, Inc.";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A37046C1-529F-4A27-95AB-7BCD9E6EAD40";
+				SDKROOT = iphoneos3.1.2;
+			};
+			name = AdHoc;
+		};
+		28A329E4110F7EAE00C43971 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = Resources/Entitlements.plist;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Classes/Other/Voice_Prefix.pch;
+				INFOPLIST_FILE = "Resources/Voice-Info.plist";
+				PRODUCT_NAME = Voice;
+			};
+			name = AdHoc;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.1.2;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.1.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Voice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+				28A329E4110F7EAE00C43971 /* AdHoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Voice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+				28A329E3110F7EAE00C43971 /* AdHoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
