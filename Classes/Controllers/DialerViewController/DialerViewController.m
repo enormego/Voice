@@ -19,7 +19,10 @@
 
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
-	[self loadURL:[NSURL URLWithString:@"https://www.google.com/voice/m?dc=gorganic#~voice:s=dialer"]];
+}
+
+- (NSURL*)defaultURL {
+	return [NSURL URLWithString:@"https://www.google.com/voice/m?dc=gorganic#~voice:s=dialer"];
 }
 
 - (void)didReceiveMemoryWarning {

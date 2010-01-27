@@ -18,4 +18,5 @@
 
 @property(nonatomic,readonly) UIWebView* webView;
 @property(nonatomic,assign) BOOL allowScrolling;
+@property(nonatomic,readonly) NSURL* defaultURL;
 @end

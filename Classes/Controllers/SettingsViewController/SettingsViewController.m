@@ -18,7 +18,10 @@
 
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
-	[self loadURL:[NSURL URLWithString:@"https://www.google.com/voice/m?dc=gorganic#voice:s=settings"]];
+}
+
+- (NSURL*)defaultURL {
+	return [NSURL URLWithString:@"https://www.google.com/voice/m?dc=gorganic#voice:s=settings"];
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {

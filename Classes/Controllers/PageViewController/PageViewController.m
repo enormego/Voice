@@ -21,7 +21,10 @@
 
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
-	[self loadURL:URL];
+}
+
+- (NSURL*)defaultURL {
+	return URL;
 }
 
 - (void)didReceiveMemoryWarning {

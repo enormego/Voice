@@ -20,7 +20,10 @@
 
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
-	[self loadURL:[NSURL URLWithString:@"https://www.google.com/voice/m?dc=gorganic#voice:s=inbox&l=inbox"]];
+}
+
+- (NSURL*)defaultURL {
+	return [NSURL URLWithString:@"https://www.google.com/voice/m?dc=gorganic#voice:s=inbox&l=inbox"];
 }
 
 - (IBAction)composeNewSMS {

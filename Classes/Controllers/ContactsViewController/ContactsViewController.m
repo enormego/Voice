@@ -16,9 +16,8 @@
 	self.title = @"Contacts";
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-	[super viewDidAppear:animated];
-	[self loadURL:[NSURL URLWithString:@"https://www.google.com/voice/m?dc=gorganic#~contacts:v=cl&m=v"]];
+- (NSURL*)defaultURL {
+	return [NSURL URLWithString:@"https://www.google.com/voice/m?dc=gorganic#~contacts:v=cl&m=v"];
 }
 
 /*

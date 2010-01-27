@@ -51,8 +51,6 @@ static UIWebView* __webView;
 				if(![imageView isKindOfClass:[UIImageView class]]) continue;
 				imageView.hidden = YES;
 			}
-			
-			[__webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.google.com/voice"] cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:3600]];
 		}
 	}
 	
@@ -61,6 +59,7 @@ static UIWebView* __webView;
 	__webView.delegate = self;
 	((UIView*)[[__webView subviews] lastObject]).scrollingEnabled = self.allowScrolling;
 	((UIView*)[[__webView subviews] lastObject]).offset = CGPointZero;
+	[self loadURL:self.defaultURL];
 }
 
 - (void)loadURL:(NSURL*)URL {
@@ -73,6 +72,10 @@ static UIWebView* __webView;
 	} else {
 		return nil;
 	}
+}
+
+- (NSURL*)defaultURL {
+	return [NSURL URLWithString:@"http://m.google.com/voice"];
 }
 
 - (void)cleanUpUI {
