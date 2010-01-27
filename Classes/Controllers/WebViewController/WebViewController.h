@@ -12,6 +12,8 @@
 @interface WebViewController : UIViewController<UIWebViewDelegate> {
 @private
 	BOOL allowScrolling;
+	UIImageView* placeHolderImageView;
+	CGPoint scrollPosition;
 }
 
 - (void)loadURL:(NSURL*)URL;
@@ -19,4 +21,5 @@
 @property(nonatomic,readonly) UIWebView* webView;
 @property(nonatomic,assign) BOOL allowScrolling;
 @property(nonatomic,readonly) NSURL* defaultURL;
+@property(nonatomic,assign) CGPoint scrollPosition;
 @end

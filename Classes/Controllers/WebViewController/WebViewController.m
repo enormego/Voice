@@ -7,6 +7,7 @@
 //
 
 #import "WebViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface UIView (UIScroller)
 @property(nonatomic,assign) BOOL scrollingEnabled;
@@ -17,11 +18,12 @@
 static UIWebView* __webView;
 
 @implementation WebViewController
-@synthesize allowScrolling;
+@synthesize allowScrolling, scrollPosition;
 
 - (id)init {
 	if((self = [super init])) {
 		self.allowScrolling = YES;
+		self.scrollPosition = CGPointZero;
 	}
 	
 	return self;
@@ -31,15 +33,23 @@ static UIWebView* __webView;
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	self.view.backgroundColor = [UIColor whiteColor];
+	
+	if(!placeHolderImageView) {
+		placeHolderImageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+		placeHolderImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+	}
+	
+	[self.view insertSubview:placeHolderImageView atIndex:0];
 }
 
 - (void)awakeFromNib {
 	[super awakeFromNib];
 	self.allowScrolling = YES;
+	self.scrollPosition = CGPointZero;
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-	[super viewDidAppear:animated];
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
 	
 	@synchronized(self) {
 		if(!__webView) {
@@ -58,8 +68,29 @@ static UIWebView* __webView;
 	__webView.frame = self.view.bounds;
 	__webView.delegate = self;
 	((UIView*)[[__webView subviews] lastObject]).scrollingEnabled = self.allowScrolling;
-	((UIView*)[[__webView subviews] lastObject]).offset = CGPointZero;
 	[self loadURL:self.defaultURL];
+	
+	if(placeHolderImageView.image) {
+		[self.view bringSubviewToFront:placeHolderImageView];
+	}
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+	[super viewDidAppear:animated];
+	[self.view bringSubviewToFront:self.webView];
+	((UIView*)[[__webView subviews] lastObject]).offset = self.scrollPosition;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+	UIGraphicsBeginImageContext(self.view.bounds.size);
+	[self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+	placeHolderImageView.image = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	
+	self.scrollPosition = ((UIView*)[[__webView subviews] lastObject]).offset;
+	
+	[self.view bringSubviewToFront:placeHolderImageView];
+	[super viewWillDisappear:animated];
 }
 
 - (void)loadURL:(NSURL*)URL {
@@ -116,12 +147,12 @@ static UIWebView* __webView;
 }
 
 - (void)viewDidUnload {
-	// Release any retained subviews of the main view.
-	// e.g. self.myOutlet = nil;
+	[placeHolderImageView release], placeHolderImageView = nil;
 }
 
 
 - (void)dealloc {
+	[placeHolderImageView release], placeHolderImageView = nil;
     [super dealloc];
 }
 
