@@ -17,8 +17,27 @@
 
 static UIWebView* __webView;
 
+#define myWebView [[self class] globalWebView]
+
 @implementation WebViewController
 @synthesize allowScrolling, scrollPosition;
+
++ (UIWebView*)globalWebView {
+	@synchronized(self) {
+		if(!__webView) {
+			__webView = [[UIWebView alloc] initWithFrame:CGRectZero];
+			__webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+			__webView.backgroundColor = [UIColor whiteColor];
+			
+			for(UIImageView* imageView in [[[__webView subviews] lastObject] subviews]) {
+				if(![imageView isKindOfClass:[UIImageView class]]) continue;
+				imageView.hidden = YES;
+			}
+		}
+	}
+	
+	return __webView;
+}
 
 - (id)init {
 	if((self = [super init])) {
@@ -51,23 +70,11 @@ static UIWebView* __webView;
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	
-	@synchronized(self) {
-		if(!__webView) {
-			__webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
-			__webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-			__webView.backgroundColor = [UIColor whiteColor];
-			
-			for(UIImageView* imageView in [[[__webView subviews] lastObject] subviews]) {
-				if(![imageView isKindOfClass:[UIImageView class]]) continue;
-				imageView.hidden = YES;
-			}
-		}
-	}
 	
-	[self.view addSubview:__webView];
-	__webView.frame = self.view.bounds;
-	__webView.delegate = self;
-	((UIView*)[[__webView subviews] lastObject]).scrollingEnabled = self.allowScrolling;
+	[self.view addSubview:myWebView];
+	myWebView.frame = self.view.bounds;
+	myWebView.delegate = self;
+	((UIView*)[[myWebView subviews] lastObject]).scrollingEnabled = self.allowScrolling;
 	[self loadURL:self.defaultURL];
 	
 	if(placeHolderImageView.image) {
@@ -78,7 +85,7 @@ static UIWebView* __webView;
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
 	[self.view bringSubviewToFront:self.webView];
-	((UIView*)[[__webView subviews] lastObject]).offset = self.scrollPosition;
+	((UIView*)[[myWebView subviews] lastObject]).offset = self.scrollPosition;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -87,7 +94,7 @@ static UIWebView* __webView;
 	placeHolderImageView.image = UIGraphicsGetImageFromCurrentImageContext();
 	UIGraphicsEndImageContext();
 	
-	self.scrollPosition = ((UIView*)[[__webView subviews] lastObject]).offset;
+	self.scrollPosition = ((UIView*)[[myWebView subviews] lastObject]).offset;
 	
 	[self.view bringSubviewToFront:placeHolderImageView];
 	[super viewWillDisappear:animated];
@@ -98,8 +105,8 @@ static UIWebView* __webView;
 }
 
 - (UIWebView*)webView {
-	if([__webView superview] == self.view) {
-		return __webView;	
+	if([myWebView superview] == self.view) {
+		return myWebView;	
 	} else {
 		return nil;
 	}

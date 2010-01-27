@@ -16,7 +16,14 @@
 	CGPoint scrollPosition;
 }
 
+// Global web view thats reused across all webViews
++ (UIWebView*)globalWebView;
+
 - (void)loadURL:(NSURL*)URL;
+
+// Subclasses should remove UI elements specifically targeted to their URL and must call back to super
+// Do not call directly, WebViewController will call as needed
+- (void)cleanUpUI;
 
 @property(nonatomic,readonly) UIWebView* webView;
 @property(nonatomic,assign) BOOL allowScrolling;

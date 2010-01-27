@@ -10,7 +10,11 @@
 
 
 @interface ContactsViewController : WebViewController {
-
+@private
+	UISegmentedControl* titleSegmentedControl;
 }
 
+- (IBAction)toggleContacts;
+
+@property(nonatomic,retain) IBOutlet UISegmentedControl* titleSegmentedControl;
 @end
